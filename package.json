@@ -1,16 +1,11 @@
 {
   "name": "dall-e",
-  "version": "1.0.0",
-  "description": "",
-  "main": "node.js",
-  "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "openai": "^4.28.4"
+    "express": "~4.16.1"
   }
 }
