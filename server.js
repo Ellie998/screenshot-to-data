@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html")); // Ensure 'index.html' exists in your project directory
 });
 
-app.post("/submit", async (req, res) => {
+app.post("/newImg", async (req, res) => {
   const prompt = req.body.prompt;
   // Process the 'prompt' and prepare 'img_url', for example purposes let's just send a placeholder image
 

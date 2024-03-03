@@ -12,21 +12,34 @@
 body {
   width: 100%;
 }
-h1 {
-  text-align: left;
+header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   padding: 2rem 1rem;
-  font-weight: bold;
-  font-size: 1.5rem;
   color: rgb(43, 43, 43);
+  display: flex;
+  justify-content: space-between;
+}
+#nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+header p {
+  cursor: pointer;
+}
+h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
 }
 h2 {
   text-align: left;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   font-weight: bold;
   color: rgb(43, 43, 43);
 }
-main {
+main > div {
   display: grid;
 
   padding: 2rem;
@@ -42,11 +55,11 @@ section {
   flex-direction: column;
 }
 
-input {
+#main_m_img input {
   height: 30px;
 }
 
-input::file-selector-button {
+#main_m_screen_data input::file-selector-button {
   cursor: pointer;
   font-weight: bold;
   padding: 1rem 1.5rem;
@@ -55,7 +68,7 @@ input::file-selector-button {
   border-radius: 4px;
   background-color: rgb(228, 228, 228);
 }
-input::file-selector-button:hover {
+#main_m_screen_data input::file-selector-button:hover {
   background-color: rgb(210, 210, 210);
 }
 
@@ -79,7 +92,11 @@ button:hover {
 }
 
 @media (max-width: 650px) {
-  main {
+  main > div {
     grid-template-columns: 1fr;
   }
+}
+
+.hidden {
+  display: none;
 }
