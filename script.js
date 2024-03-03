@@ -2,6 +2,9 @@ const navImgElement = document.getElementById("nav_m_img");
 const navScreenDataElement = document.getElementById("nav_m_screen_data");
 const mainImgElement = document.getElementById("main_m_img");
 const mainScreenDataElement = document.getElementById("main_m_screen_data");
+const buttonImgElement = document.getElementById("button_m_img");
+const buttonScreenDataElement = document.getElementById("button_m_screen_data");
+const loaderElements = document.querySelectorAll(".result_container .loader");
 
 navImgElement.addEventListener("click", function () {
   mainImgElement.classList.remove("hidden");
@@ -12,7 +15,10 @@ navScreenDataElement.addEventListener("click", function () {
   mainScreenDataElement.classList.remove("hidden");
 });
 
-document.getElementById("button_m_img").addEventListener("click", function () {
+buttonImgElement.addEventListener("click", function () {
+  buttonImgElement.disabled = true;
+
+  loaderElements[0].classList.remove("hidden");
   const promptValue = document.getElementById("promptInput").value;
 
   fetch("/newImg", {
@@ -24,8 +30,14 @@ document.getElementById("button_m_img").addEventListener("click", function () {
   })
     .then((response) => response.json())
     .then((data) => {
+      loaderElements[0].classList.add("hidden");
       document.getElementById("img").src = data.img_url;
-      // console.log(data.img_url);
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Error:", error);
+    })
+    .finally(() => {
+      loaderElements[0].classList.add("hidden");
+      buttonImgElement.disabled = false;
+    });
 });
