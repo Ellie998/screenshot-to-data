@@ -110,12 +110,19 @@ button:disabled {
   cursor: not-allowed;
   background-color: rgb(56, 55, 55);
 }
+ol {
+  margin-top: 4rem;
+}
+li {
+  padding-bottom: 2rem;
+}
 
 @media (max-width: 650px) {
   main > div {
     grid-template-columns: 1fr;
   }
 }
+/* ----------------------------------------------- */
 
 .hidden {
   display: none;

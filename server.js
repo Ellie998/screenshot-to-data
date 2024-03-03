@@ -27,6 +27,18 @@ app.post("/newImg", async (req, res) => {
     console.log(error);
   }
 });
+app.post("/screenData", async (req, res) => {
+  const files = req.body.files;
+  // Process the 'prompt' and prepare 'img_url', for example purposes let's just send a placeholder image
+
+  try {
+    // const img_url = await sendOpenaiReq(prompt);
+    // res.json({ img_url }); // Send back the image URL
+    res.json({ data: "result" });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 // Start the server
 app.listen(port, () => {

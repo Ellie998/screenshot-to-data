@@ -39,18 +39,20 @@
         <section>
           <h2>입력</h2>
 
-          <form>
+          <div class="form">
             <div>data를 추출하려는 스크린샷을 업로드하세요</div>
-            <input type="file" id="fileInput" />
+            <input type="file" id="fileInput" accept="image/*" multiple />
             <button type="button" class="button" id="button_m_screen_data">
               생성
             </button>
-          </form>
+          </div>
+          <div id="preview"></div>
         </section>
         <section>
           <h2>결과</h2>
           <div class="result_container">
             <div class="loader hidden"></div>
+            <div id="screen_data_result_box"></div>
           </div>
         </section>
       </div>
