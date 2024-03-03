@@ -35,19 +35,28 @@ h1 {
 }
 h2 {
   text-align: left;
-  padding: 2rem 0;
+  padding-bottom: 1.5rem;
   font-weight: bold;
   color: rgb(43, 43, 43);
 }
+main {
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+}
+
 main > div {
   display: grid;
-
-  padding: 2rem;
+  padding: 4rem;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 section {
-  padding: 1rem 0;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  max-width: 550px;
 }
 
 .form {
