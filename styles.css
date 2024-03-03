@@ -164,3 +164,7 @@ button:disabled {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
 }
+
+.error_message {
+  color: #ff3d00;
+}
