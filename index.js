@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 
-const { sendOpenaiReq } = require("./lib/dall_e");
+const { sendOpenaiReq } = require("./server/lib/dall_e");
 
 const app = express();
 const PORT = process.env.PORT || 3000; // Heroku가 할당하는 포트 또는 기본 포트 3000 사용
