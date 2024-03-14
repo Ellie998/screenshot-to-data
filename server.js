@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const { sendOpenaiReq } = require("./lib/dall_e");
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000; // Heroku가 할당하는 포트 또는 기본 포트 3000 사용
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(express.static(path.join(__dirname))); // Serve your static files
@@ -41,6 +41,6 @@ app.post("/screenData", async (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
