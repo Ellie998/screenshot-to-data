@@ -9,11 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 3000; // Heroku가 할당하는 포트 또는 기본 포트 3000 사용
 
 app.use(bodyParser.json()); // for parsing application/json
-app.use(express.static(path.join(__dirname))); // Serve your static files
+app.use(express.static(path.join(__dirname, "client"))); // Serve your static files
 
 // Serve HTML file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html")); // Ensure 'index.html' exists in your project directory
+  res.sendFile(path.join(__dirname, "client", "index.html")); // Ensure 'index.html' exists in your project directory
 });
 
 app.post("/newImg", async (req, res) => {
