@@ -1,5 +1,14 @@
-# 사용자가 원하는 그림을 설명을 입력받아 제공하기
-- url : https://screenshot-to-data-d2b6a6ad2c88.herokuapp.com/
+# 사용자가 원하는 그림을 설명을 입력받아 제공하는 사이트
+- 배포 : https://screenshot-to-data-d2b6a6ad2c88.herokuapp.com/
+
+## 동작
+- dall-e를 통해 사용자가 작성한 설명대로 그림을 생성한다.
+- 그림 생성 과정에서는 로딩중 아이콘을 표시한다.
+- 그림 생성이 완료되면 우측 화면에 그림을 보인다.
+
+## 설계 방법
+- Chat GPT API 사용
+- node.js 사용
 
 ## 요구사항 명세
 
