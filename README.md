@@ -1,6 +1,6 @@
 # 사용자가 원하는 그림을 설명을 입력받아 제공하는 사이트
 
-- 배포 URL : https://screenshot-to-data-d2b6a6ad2c88.herokuapp.com/
+- 배포 URL : https://screenshot-to-data.onrender.com/
 - **주의 : 토큰을 모두 사용해 현재는 입력된 설명과 관련이 없는 사진을 출력하고 있습니다.**
 
 <img width="1440" alt="스크린샷 2024-03-23 오후 9 17 01" src="https://github.com/Ellie998/screenshot-to-data/assets/89681100/38f0aeed-3767-4793-9ed2-420a3fa171ae">
